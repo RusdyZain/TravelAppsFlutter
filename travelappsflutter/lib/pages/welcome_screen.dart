@@ -16,7 +16,7 @@ class Home_ScreenState extends State<HomeScreen> {
     return Container(
       decoration: const BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("images/screen.jpeg"),
+              image: AssetImage("images/bg.jpg"),
               fit: BoxFit.cover,
               opacity: 0.7)),
       child: Material(
