@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travelappsflutter/pages/post_screen.dart';
 import 'package:travelappsflutter/wigets/home_app_bar.dart';
 import 'package:travelappsflutter/wigets/home_bottom_bar.dart';
 
@@ -43,7 +44,13 @@ class _HomePageState extends State<HomePage> {
                             shrinkWrap: true,
                             itemBuilder: (BuildContext context, int index) {
                               return InkWell(
-                                onTap: () {},
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => PostScreen(),
+                                      ));
+                                },
                                 child: Container(
                                   width: 160,
                                   padding: EdgeInsets.all(20),
@@ -133,7 +140,13 @@ class _HomePageState extends State<HomePage> {
                         child: Column(
                           children: [
                             InkWell(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => PostScreen(),
+                                    ));
+                              },
                               child: Container(
                                 height: 200,
                                 decoration: BoxDecoration(

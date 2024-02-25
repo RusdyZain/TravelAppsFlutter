@@ -29,7 +29,7 @@ class _HomeBottomBarState extends State<HomeBottomBar> {
           color: Colors.redAccent,
         ),
         Icon(
-          Icons.location_city_outlined,
+          Icons.location_on_outlined,
           size: 30,
         ),
         Icon(
