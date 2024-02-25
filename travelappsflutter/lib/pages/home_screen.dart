@@ -9,6 +9,15 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  var category = [
+    'Best Place',
+    'Most Visited',
+    'Favorites',
+    'New Added',
+    'Hotels',
+    'Restaurants'
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -100,9 +109,9 @@ class _HomePageState extends State<HomePage> {
                               )
                             ],
                           ),
-                          child: const Text(
-                            "Best Places",
-                            style: TextStyle(
+                          child: Text(
+                            category[i],
+                            style: const TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.w500,
                             ),
@@ -111,7 +120,68 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ),
                 ),
-              )
+              ),
+              const SizedBox(height: 10),
+              ListView.builder(
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemCount: 6,
+                  shrinkWrap: true,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Padding(
+                      padding: const EdgeInsets.all(15),
+                      child: Column(
+                        children: [
+                          InkWell(
+                            onTap: () {},
+                            child: Container(
+                              height: 200,
+                              decoration: BoxDecoration(
+                                color: Colors.black,
+                                borderRadius: BorderRadius.circular(15),
+                                image: DecorationImage(
+                                  image:
+                                      AssetImage("images/city${index + 1}.jpg"),
+                                  fit: BoxFit.cover,
+                                  opacity: 0.8,
+                                ),
+                              ),
+                            ),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.only(top: 10),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  "City Name",
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w600),
+                                ),
+                                Icon(Icons.more_vert, size: 30)
+                              ],
+                            ),
+                          ),
+                          const SizedBox(height: 10),
+                          const Row(
+                            children: [
+                              Icon(
+                                Icons.star,
+                                color: Colors.amber,
+                                size: 20,
+                              ),
+                              Text(
+                                "4.5",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                    );
+                  })
             ],
           ),
         ),
