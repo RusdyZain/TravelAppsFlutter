@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:travelappsflutter/pages/home_screen.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+  HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => Home_ScreenState();
@@ -14,7 +14,7 @@ class Home_ScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
           image: DecorationImage(
               image: AssetImage("images/bg.jpg"),
               fit: BoxFit.cover,
@@ -23,11 +23,11 @@ class Home_ScreenState extends State<HomeScreen> {
         color: Colors.transparent,
         child: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 65, horizontal: 25),
+            padding: EdgeInsets.symmetric(vertical: 65, horizontal: 25),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
+                Text(
                   "Enjoy",
                   style: TextStyle(
                       color: Colors.white,
@@ -35,7 +35,7 @@ class Home_ScreenState extends State<HomeScreen> {
                       fontWeight: FontWeight.bold,
                       letterSpacing: 1.5),
                 ),
-                const SizedBox(height: 2),
+                SizedBox(height: 2),
                 Text(
                   "the World!",
                   style: TextStyle(
@@ -44,7 +44,7 @@ class Home_ScreenState extends State<HomeScreen> {
                       fontWeight: FontWeight.w400,
                       letterSpacing: 1.5),
                 ),
-                const SizedBox(height: 12),
+                SizedBox(height: 12),
                 Text(
                   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
                   style: TextStyle(
@@ -53,22 +53,22 @@ class Home_ScreenState extends State<HomeScreen> {
                     letterSpacing: 1.2,
                   ),
                 ),
-                const SizedBox(height: 30),
+                SizedBox(height: 30),
                 InkWell(
                   onTap: () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const HomePage(),
+                          builder: (context) => HomePage(),
                         ));
                   },
                   child: Ink(
-                    padding: const EdgeInsets.all(15),
+                    padding: EdgeInsets.all(15),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    child: const Icon(
+                    child: Icon(
                       Icons.arrow_forward_ios,
                       color: Colors.black54,
                       size: 20,
