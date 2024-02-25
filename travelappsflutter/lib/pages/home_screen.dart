@@ -86,20 +86,28 @@ class _HomePageState extends State<HomePage> {
                   padding: const EdgeInsets.all(8),
                   child: Row(
                     children: [
-                      Container(
-                        margin: const EdgeInsets.symmetric(horizontal: 10),
-                        padding: const EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(10),
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Colors.black26,
-                              blurRadius: 4,
-                            )
-                          ],
-                        ),
-                      )
+                      for (int i = 0; i < 6; i++)
+                        Container(
+                          margin: const EdgeInsets.symmetric(horizontal: 10),
+                          padding: const EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(10),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Colors.black26,
+                                blurRadius: 4,
+                              )
+                            ],
+                          ),
+                          child: const Text(
+                            "Best Places",
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        )
                     ],
                   ),
                 ),
